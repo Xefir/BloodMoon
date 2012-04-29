@@ -41,7 +41,7 @@ public class BloodMoonExecuter implements CommandExecutor {
 			BloodMoon.bloodMoonWorlds.add(worldName);
 			
 			for (Player worldPlayer : world.getPlayers()){
-				worldPlayer.sendMessage(ChatColor.RED + "[" + player.getName() + "] The blood moon is rising !");
+				worldPlayer.sendMessage(ChatColor.RED + "[" + player.getName() + "]" + BloodMoon.config.getMessage());
 			}
 		}
 		

@@ -1,6 +1,7 @@
 name: BloodMoon
 version: 0.13.2
 main: uk.co.jacekk.bukkit.bloodmoon.BloodMoon
+author: wide_load & Xefir Destiny
 load: startup
 commands:
     bloodmoon:

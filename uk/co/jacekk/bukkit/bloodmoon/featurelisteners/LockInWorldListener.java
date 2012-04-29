@@ -6,7 +6,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerPortalEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
 
@@ -27,12 +26,7 @@ public class LockInWorldListener implements Listener {
 			player.sendMessage(ChatColor.RED + "You cannot leave the world until the bloodmoon has ended.");
 		}
 	}
-	
-	@EventHandler(priority = EventPriority.HIGH)
-	public void onPlayerPortal(PlayerPortalEvent event){
-		this.onPlayerTeleport(event);
-	}
-	
+
 	@EventHandler(priority = EventPriority.HIGH)
 	public void onPlayerRespawn(PlayerRespawnEvent event){
 		Player player = event.getPlayer();

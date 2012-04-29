@@ -21,7 +21,7 @@ public class BloodMoonTimeMonitor implements Runnable {
 				
 				if (worldTime == 123 && Math.random() < (((double) BloodMoon.config.getInt("bloodmoon-chance")) / 100) && BloodMoon.bloodMoonWorlds.contains(worldName) == false){
 					for (Player player : world.getPlayers()){
-						player.sendMessage(ChatColor.RED + "The blood moon is rising !");
+						player.sendMessage(ChatColor.RED + BloodMoon.config.getMessage());
 					}
 					
 					BloodMoon.bloodMoonWorlds.add(worldName);
