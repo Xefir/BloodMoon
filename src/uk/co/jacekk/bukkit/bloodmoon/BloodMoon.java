@@ -130,11 +130,11 @@ public class BloodMoon extends JavaPlugin {
 		}
 		
 		// arrow-rate is handled in BloodMoonEntitySkeleton
-
+		
 		if (BloodMoon.config.getBoolean("features.sword-damage.enabled")){
 			this.manager.registerEvents(new SwordDamageListener(this), this);
 		}
-
+		
 		if (BloodMoon.config.getBoolean("features.lock-in-world.enabled") && BloodMoon.config.getBoolean("always-on") == false){
 			this.manager.registerEvents(new LockInWorldListener(), this);
 		}
