@@ -44,6 +44,15 @@ public class BloodMoonConfig {
 		this.configDefaults.put("features.more-exp.enabled", true);
 		this.configDefaults.put("features.more-exp.multiplier", 2);
 
+		this.configDefaults.put("features.sword-damage.enabled", true);
+		this.configDefaults.put("features.sword-damage.mobs", Arrays.asList("ZOMBIE", "SKELETON", "SPIDER", "CREEPER", "ENDERMAN"));
+		this.configDefaults.put("features.sword-damage.chance", 10);
+		this.configDefaults.put("features.sword-damage.damage.diamond", 100);
+		this.configDefaults.put("features.sword-damage.damage.iron", 20);
+		this.configDefaults.put("features.sword-damage.damage.gold", 10);
+		this.configDefaults.put("features.sword-damage.damage.stone", 20);
+		this.configDefaults.put("features.sword-damage.damage.wood", 10);
+
 		this.configDefaults.put("features.super-creepers.enabled", true);
 		this.configDefaults.put("features.super-creepers.power", 4.0D);
 		

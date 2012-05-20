@@ -25,6 +25,7 @@ import uk.co.jacekk.bukkit.bloodmoon.featurelisteners.MoreSpawningListener;
 import uk.co.jacekk.bukkit.bloodmoon.featurelisteners.SpawnOnKillListener;
 import uk.co.jacekk.bukkit.bloodmoon.featurelisteners.SpawnOnSleepListener;
 import uk.co.jacekk.bukkit.bloodmoon.featurelisteners.SuperCreepersListener;
+import uk.co.jacekk.bukkit.bloodmoon.featurelisteners.SwordDamageListener;
 import uk.co.jacekk.bukkit.bloodmoon.listeners.EntityListener;
 import uk.co.jacekk.bukkit.bloodmoon.listeners.PlayerListener;
 import uk.co.jacekk.bukkit.bloodmoon.listeners.WorldListener;
@@ -129,6 +130,10 @@ public class BloodMoon extends JavaPlugin {
 		}
 		
 		// arrow-rate is handled in BloodMoonEntitySkeleton
+
+		if (BloodMoon.config.getBoolean("features.sword-damage.enabled")){
+			this.manager.registerEvents(new SwordDamageListener(this), this);
+		}
 
 		if (BloodMoon.config.getBoolean("features.lock-in-world.enabled") && BloodMoon.config.getBoolean("always-on") == false){
 			this.manager.registerEvents(new LockInWorldListener(), this);
